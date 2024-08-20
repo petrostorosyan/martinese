@@ -1,0 +1,26 @@
+    :root {
+        --page-title-font-size: 46px;
+        --page-title-line-height: 55px;
+        --text-size: 16px;
+    }
+
+    /* <---------------------------------  Media  --------------------------------> */
+
+    @media screen and (max-width: 900px) {
+    :root {
+        --page-title-font-size: 40px;
+    }
+    }
+
+    @media screen and (max-width: 670px) {
+    :root {
+        --page-title-font-size: 28px;
+        --page-title-line-height: 30px;
+    }
+    }
+
+    @media screen and (max-width: 450px) {
+    :root {
+        --page-title-font-size: 24px;
+    }
+    }

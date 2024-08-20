@@ -1,0 +1,12 @@
+$primary-color: #28292b;
+$secondary-color: #ffae0c;
+$page-title-font-size: 42px;
+$desktop-screen-size: 1440px;
+$tablet-screen-size: 1024px;
+$mobile-screen-size: 600px;
+
+ 
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+}

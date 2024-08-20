@@ -1,0 +1,7 @@
+@import "./styles/_mixins.scss";
+
+.main {
+  @include regularBox(100%, unset, 200px, flex, flex-start, flex-start, column);
+  border: 1px solid #000;
+}
+
