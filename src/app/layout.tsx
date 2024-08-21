@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import "./globals.scss";
+import Header from "../components/header/index";
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cinzel.className}>
-        {/* <Header /> */}
+        <Header />
         <main>{children}</main>
         {/* <Footer /> */}
       </body>
