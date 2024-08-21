@@ -2,7 +2,6 @@
 
 .main {
   @include regularBox(100%, unset, 200px, flex, flex-start, flex-start, column);
-  padding-top: 91px;
-  border: 1px solid #000;
+  // padding-top: 91px;
 }
 

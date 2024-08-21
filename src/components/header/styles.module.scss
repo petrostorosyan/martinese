@@ -4,5 +4,16 @@
     position: fixed;
     background-color: #000;
     opacity: 50%;
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .headerContent {
+        width: 1676px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid red;
+    }
 }
