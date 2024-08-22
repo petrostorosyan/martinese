@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel } from "next/font/google";
 import "./globals.scss";
-import Header from "../components/header/index";
+import Header from "../components/header/index"
 
 const cinzel = Cinzel({ subsets: ["latin"] });
 
@@ -10,11 +10,7 @@ export const metadata: Metadata = {
   description: "Martinese",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({children,}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en">
       <body className={cinzel.className}>

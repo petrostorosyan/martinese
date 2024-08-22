@@ -8,8 +8,11 @@ const Header = () => {
         <div className={styles.headerContainer}>
             <div className={styles.headerContent}>
                 <Image src={logo} width={234} height={52} alt="logo" />
-                <Navigation />
-                <button>Book Table</button>
+                <div className={styles.navigation}>
+                  <Navigation />
+                  <button>Book Table</button>
+                </div>
+                
             </div>
         </div>
     )
