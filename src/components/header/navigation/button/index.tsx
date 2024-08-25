@@ -6,10 +6,14 @@ import Button from '@mui/material/Button';
 import Menu, { MenuProps } from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { Source_Serif_4 } from "next/font/google";
+
+const source = Source_Serif_4({ subsets: ["latin"] });
 
 
 const StyledMenu = styled((props: MenuProps) => (
     <Menu
+      sx={{opacity: 0.8}}
       elevation={0}
       anchorOrigin={{
         vertical: 'bottom',
@@ -22,16 +26,14 @@ const StyledMenu = styled((props: MenuProps) => (
       {...props}
     />
   ))(({ theme }) => ({
-    '& .MuiPaper-root': {
-      borderRadius: 6,
+    '& .MuiPaper-root': { 
+      borderRadius: 0,     
       marginTop: theme.spacing(1),
-      minWidth: 180,
-      color:
-        theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
-      boxShadow:
-        'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
+      minWidth: 110,
+      color: theme.palette.mode === 'light' ? 'rgb(55, 65, 81)' : theme.palette.grey[300],
+      boxShadow: 'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
       '& .MuiMenu-list': {
-        padding: '4px 0',
+        padding: '0',
       },
       '& .MuiMenuItem-root': {
         '& .MuiSvgIcon-root': {
@@ -49,7 +51,7 @@ const StyledMenu = styled((props: MenuProps) => (
     },
   }));
 
-const NavButton = () => {
+const NavButton = ({ btnName, menuItems = [] }: { btnName: string; menuItems?: Array<string> }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -70,8 +72,9 @@ const NavButton = () => {
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
+        className={`${source.className} ${styles.button}`}
       >
-        Options
+        {btnName}
       </Button>
       <StyledMenu
         id="demo-customized-menu"
@@ -81,16 +84,13 @@ const NavButton = () => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        disableScrollLock={true}   
       >
-        <MenuItem onClick={handleClose} disableRipple>
-        
-          Edit
-        </MenuItem>
-        <MenuItem onClick={handleClose} disableRipple>
-        
-          Duplicate
-        </MenuItem>
-        
+        {menuItems.map((item, index) => {
+          return (
+            <MenuItem key={index+1} onClick={handleClose} disableRipple className={styles.item}>{item}</MenuItem>
+          )
+        })}   
       </StyledMenu>
     </div>
   );

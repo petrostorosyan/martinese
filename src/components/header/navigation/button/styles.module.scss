@@ -1,0 +1,20 @@
+.button {
+  width: 85px;
+  background-color: transparent !important;
+  text-transform: capitalize !important;
+  font-weight: 200 !important;
+  letter-spacing: 1px !important;
+  font-size: 18px !important;
+  margin-right: 70px !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+.item {
+  background-color: #0E0D0D !important;
+  border-bottom: 1px solid #252424;
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+}
