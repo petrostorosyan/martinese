@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import logo from "../../../public/assets/logo/white-logo.png";
+import logo from "../../../public/assets/images/logo/white-logo.png";
 import Navigation from "./navigation/index";
 import Link from "next/link";
 

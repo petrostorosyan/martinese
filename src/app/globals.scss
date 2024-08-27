@@ -18,3 +18,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica"), url("../../public/assets/fonts/helvetica/Helvetica.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Helvetica Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Light"),
+    url("../../public/assets/fonts/helvetica/helvetica-light.woff") format("woff");
+}
