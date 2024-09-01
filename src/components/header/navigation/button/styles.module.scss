@@ -1,3 +1,5 @@
+@import "../../../../app/styles/variables.module";
+
 .button {
   width: 85px;
   background-color: transparent !important;
@@ -6,9 +8,11 @@
   letter-spacing: 1px !important;
   font-size: 18px !important;
   margin-right: 70px !important;
+  transition: 0.5s;
 
   &:hover {
     background-color: transparent !important;
+    color: $secondary-color;
   }
 }
 .item {

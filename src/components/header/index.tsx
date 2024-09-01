@@ -3,6 +3,19 @@ import styles from "./styles.module.scss";
 import logo from "../../../public/assets/images/logo/white-logo.png";
 import Navigation from "./navigation/index";
 import Link from "next/link";
+import Button from "../shared/button";
+import { ButtonType } from "@/types/buttontypes";
+import variables from "../../app/styles/_variables.module.scss";
+
+const buttonProps: ButtonType  = {
+    width: "126px",
+    height: "38px",
+    name: "Book Table",
+    routePath: "/",
+    color: `${variables.secondaryColor}`,
+    fontSize: "16px",
+    border: `2px solid ${variables.secondaryColor}`
+};
 
 const Header = () => {
     return (
@@ -10,9 +23,7 @@ const Header = () => {
             <div className={styles.headerContent}>
                 <Image src={logo} width={234} height={52} alt="logo" />
                 <Navigation />
-                <button className={styles.bookTableBtn}>
-                    <Link href={"#"} className={styles.link}>Book Table</Link>
-                </button>
+                <Button buttonProps={buttonProps} />
             </div>
         </div>
     )

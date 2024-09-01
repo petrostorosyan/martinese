@@ -1,3 +1,5 @@
+@import "../../../app/styles/variables.module";
+
 .navigationList {
   height: 100%;
   display: flex;
@@ -10,12 +12,17 @@
     font-weight: 200 !important;
     font-size: 18px !important;
     margin-right: 70px;
-    background-color: transparent !important;
+    background-color: transparent !important;   
   
 
     .link {
       text-decoration: none;
       color: #fcfcfc;
+      transition: 0.5s;
+
+      &:hover {
+        color: $secondary-color;
+      }
     }
   }
 }

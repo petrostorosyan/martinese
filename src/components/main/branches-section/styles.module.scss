@@ -1,0 +1,38 @@
+@import "../../../app/styles/variables.module";
+@import "../../../app/styles/mixins";
+
+.branchesContainer {
+  @include regularBox(100%, unset, 200px, flex, flex-start, center, column);
+  padding-bottom: 93px;
+  
+
+  .title {
+    width: 100%;
+    min-height: 20px;
+    margin-top: 78px;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+
+  .branchBox {
+    @include regularBox(1620px, unset, 200px, flex, space-between, flex-start);
+    margin-top: 85px;
+    gap: 78px;
+    margin-bottom: 111px;
+
+    .branchImg {
+      width: 488px;
+      height: 434px;
+    }
+
+    .branchName {
+      margin-top: 5px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 3px;
+    }
+  }
+}

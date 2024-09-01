@@ -5,16 +5,22 @@ import { Source_Serif_4 } from "next/font/google";
 import decor from "../../../../public/assets/images/decores/lines-groups.png";
 import salad from "../../../../public/assets/images/home-page/explore/salad.webp";
 import meat from "../../../../public/assets/images/home-page/explore/meat.webp";
+import Button from "@/components/shared/button";
+import { ButtonType } from "@/types/buttontypes";
+import variables from "../../../app/styles/_variables.module.scss";
 
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+const cinzel = Cinzel({subsets: ["latin"], weight: ["400"]});
+const sourceSerif = Source_Serif_4({subsets: ["latin"], weight: ["200", "300","400", "500"]});
 
-const sourceSerif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["200", "300","400", "500"],
-});
+const buttonProps: ButtonType  = {
+  width: "164px",
+  height: "50px",
+  name: "About",
+  routePath: "/",
+  color: `${variables.secondaryColor}`,
+  fontSize: "18px",
+  border: `1px solid ${variables.secondaryColor}`
+};
 
 const Explore = () => {
   return (
@@ -32,7 +38,7 @@ const Explore = () => {
             an ambiance that transports you to a realm of unparalleled
             indulgence.
           </p>
-          <button className={styles.aboutBtn}>About</button>
+          <Button buttonProps={buttonProps} />
         </div>
         <Image className={styles.img} src={meat} alt={"meat"} />
       </div>

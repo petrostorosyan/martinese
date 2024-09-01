@@ -1,47 +1,14 @@
+@import "../../app/styles/mixins";
+
 .headerContainer {
-  width: 100%;
-  height: 91px;
+  @include regularBox(100%, 91px, unset, flex, center, center);
   position: fixed;
   background-color: #000;
   opacity: 0.8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 5000;
 
+
   .headerContent {
-    width: 1676px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .bookTableBtn {
-      width: 126px;
-      height: 38px;
-      border: 2px solid #d8ce9c;
-      background-color: transparent;
-     display: flex;
-
-      .link {
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: #d8ce9c;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-
-        .navigation {
-            width: 1300px;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid red;
-        }
-    }
+    @include regularBox(1676px, 100%, unset, flex, space-between, center);
   }
 }

@@ -1,32 +1,15 @@
+@import "../../../app/styles/mixins";
+
 .heroContainer {
-    width: 100%;
-    height: 1080px;
-    background-image: url("../../../../public/assets/images/home-page/hero-section-bg.webp");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  @include regularBox(100%, 1080px, unset, flex, center, center, column);
+  background-image: url("../../../../public/assets/images/home-page/hero-section-bg.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 
-    .text {
-        width: 720px;
-        height: 740px;
-        color: #fff;
-    }
-
-    .button {
-        width: 270px;
-        height: 57px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 18px;
-        color: #D8CE9C;
-        border: 1px solid #D8CE9C;
-        background-color: transparent;
-        letter-spacing: 1px;
-        font-family: "Helvetica";
-    }
+  .text {
+    width: 720px;
+    height: 740px;
+    color: #fff;
+  }
 }
